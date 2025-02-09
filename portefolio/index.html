@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Noé Belperin</title>
+    <link rel="stylesheet" href="vidéo.css">
+</head>
+<body>
+
+
+    <nav id="navbar">
+        <ul class="menu">
+            <li class="title menu-item menu-item-has-children">
+                <a class="link-fade-top" href="#a_propos" data-title="À propos">
+                    <span class="text">À propos</span>
+                </a>
+            </li>
+            <li class="title menu-item menu-item-has-children">
+                <a class="link-fade-top" href="#competences" data-title="Compétences">
+                    <span class="text">Compétences</span>
+                </a>
+            </li>
+            <li class="title menu-item menu-item-has-children">
+                <a class="link-fade-top" href="#projet" data-title="Projets">
+                    <span class="text">Projets</span>
+                </a>
+            </li>
+            <li class="title menu-item menu-item-has-children">
+                <a class="link-fade-top" href="#contact" data-title="Contact">
+                    <span class="text">Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+    <style>
+    /* Style de la barre de navigation */
+    #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 10px 0;
+        z-index: 1000;
+    }
+    
+    .menu {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .menu-item {
+        margin: 0 15px;
+    }
+    
+    .menu-item a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        transition: color 0.3s;
+    }
+    
+    .menu-item a:hover {
+        color: #FFD700;
+    }
+    
+    /* Ajout de marge pour éviter que le contenu soit caché */
+    body {
+        margin-top: 60px;
+    }
+    </style>
+    <!-- Vidéo de fond -->
+    <video autoplay muted loop id="background-video">
+        <source src="fond.mp4" type="video/mp4">
+        Votre navigateur ne prend pas en charge les vidéos HTML5.
+    </video>
+
+    <!-- Contenu principal affiché SUR la vidéo -->
+    <div class="content">
+        <h1>Noé BELPERIN</h1>
+        <p>Étudiant en 2ᵉ année d'école d'ingénieur en informatique</p>
+    </div>
+
+    <!-- Section "À propos" en dessous de la vidéo -->
+    <section id="a_propos">
+        <h2>À propos</h2>
+        <div id="propos_cont">
+            <p id="desc">
+                Bonjour et bienvenue sur mon portfolio.
+                <br>
+                Je m'appelle Noé Belperin, j'ai 19 ans et je viens d'Échenoz-la-Méline.
+                <br><br>
+                Depuis toujours passionné par l’informatique et le développement, j’ai choisi de poursuivre mes études dans ce domaine en intégrant 
+                l’EPITA Lyon en 2023, où je prépare un diplôme d’ingénieur en informatique.
+                <br>
+                Avant cela, j’ai obtenu un baccalauréat avec les spécialités Mathématiques et NSI au lycée Les Haberges à Vesoul, décrochant une mention bien en 2023.
+                <br><br>
+                Mon parcours m’a permis de développer mes compétences en programmation, en gestion de projet et en travail d’équipe à travers diverses expériences académiques et professionnelles. 
+                J’ai notamment eu l’opportunité d’évoluer dans des environnements variés, que ce soit en tant que vendeur chez Brico Leclerc ou lors de mon service civique au sein d’un club de basket.
+                <br>
+                Ces expériences m’ont permis de renforcer mon autonomie, mon sens de l’organisation et ma capacité à m’adapter à différents contextes professionnels.
+                <br><br>
+                Dans les années à venir, je souhaite continuer à me perfectionner en développement et acquérir une expertise approfondie en informatique, 
+                notamment grâce à des expériences en stage.
+                <br><br>
+                Je serais ravi de collaborer avec vous sur de futurs projets.<br>
+                Pour en savoir plus sur mon parcours, mes compétences et mes réalisations, ou tout simplement pour me contacter, 
+                n’hésitez pas à explorer ce site et à me faire part de vos retours.
+                Vous pouvez consulter mon CV en cliquant sur le lien suivant 
+                <a id="rapport" href="/CV.pdf">Accéder au CV</a>.
+                <br><br>
+                Bonne visite et à bientôt !
+            </p>
+            <!-- Image de présentation -->
+            <!--<img src="/assets/moi.7e188120.jpg" alt="Photo de Noé Belperin">-->
+        </div>
+    </section>
+
+
+    <section id="competences">
+        <h2>Mes Compétences</h2>
+    
+        <div class="skills-group">
+            <h3>Front-End</h3>
+            <div class="skills-container front-end">
+                <div class="skill html">HTML</div>
+                <div class="skill css">CSS</div>
+                <div class="skill js">JavaScript</div>
+            </div>
+        </div>
+    
+        <div class="skills-group">
+            <h3>Back-End</h3>
+            <div class="skills-container back-end">
+                <div class="skill php">PHP</div>
+                <div class="skill sql">SQL</div>
+            </div>
+        </div>
+    
+        <div class="skills-group">
+            <h3>Autres</h3>
+            <div class="skills-container autres">
+                <div class="skill python">Python</div>
+                <div class="skill c">C</div>
+                <div class="skill csharp">C#</div>
+                <div class="skill rust">Rust</div>
+            </div>
+        </div>
+    </section>
+
+    
+    
+
+
+    <section class='screen' id='qualificationsScreen'>
+        <div class='spacermenu'></div>
+        <h1 class='sectionTitle'>Diplômes</h1>
+        <div class='timeline'>
+            <div class='line'></div>
+            
+            <div class='qualif left'>
+                <h2 class='qualifTitle'>École pour l'informatique et les techniques avancées (EPITA)</h2>
+                <div class='qualifText'>
+                    <p>Diplôme d'ingénieur en informatique</p>
+                    <p>EPITA Lyon, France</p>
+                </div>
+                <p class='qualifDate'>2023 -> 2028</p>
+            </div>
+            <!--<div class='date-marker' style='top: 10%;'>2023</div>-->
+    
+            <div class='qualif right'>
+                <h2 class='qualifTitle'>Baccalauréat</h2>
+                <div class='qualifText'>
+                    <p>Spécialités: Mathématiques, Numérique et Sciences informatiques</p>
+                    <p>Diplôme du baccalauréat - Mention Bien</p>
+                    <p>Lycée les Haberges, Vesoul, France</p>
+                </div>
+                <p class='qualifDate'>2023</p>
+            </div>
+            <!--<div class='date-marker' style='top: 50%;'>2023</div>-->
+    
+            <div class='qualif left'>
+                <h2 class='qualifTitle'>Brevet des collèges</h2>
+                <div class='qualifText'>
+                    <p>Diplôme national du brevet des collèges - Mention Très Bien</p>
+                    <p>Collège René Cassin, Noidans-les-Vesoul, France</p>
+                </div>
+                <p class='qualifDate'>2020</p>
+            </div>
+            <!--<div class='date-marker' style='top: 90%;'>2020</div>-->
+        </div>
+    </section>
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="projet">
+        <br>
+        <!--- titre de la section-->
+        <h2>Mes projets.</h2>
+    
+        <!--- tableau du projet 1 texte à droite et carrousel à gauche -->
+        <div class="projet_box">
+            <!-- Division pour la partie de gauche-->
+            <div class="gauche1">
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <img src="Galaxy_traveller/Lvl1.webp" alt="Image 1" class="carousel-item active">
+                        <img src="Galaxy_traveller/Lvl2.webp" alt="Image 2" class="carousel-item">
+                        <img src="Galaxy_traveller/Lvl3.webp" alt="Image 3" class="carousel-item">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Division pour la partie de droite-->
+            <div class="droite1">
+                <h3>Création d'un jeu vidéo - 2024</h3>
+                <p>Lors de ma première année à EPITA Lyon, il nous a été demandé de créer un jeu vidéo de toutes pièces sur Unity. Par groupe de 4, nous avions l'obligation de respecter deux règles : inclure une IA et la possibilité de jouer en mode multi-joueurs. Nous avons donc opté pour un jeu de plateforme sous le principe de speedrun, avec des IA qui viennent nous combattre pour ralentir notre progression.</p>
+                <p>Pour réaliser ce projet, nous avons imaginé ce jeu, rédigé un cahier des charges, défendu ce projet devant un jury, développé un site web pour mettre en évidence notre jeu et le rendre accessible au public. Ce projet nous a permis de prendre en main Unity ainsi que d'enrichir nos compétences en C#.
+                    <p>Pour plus d'informations: 
+                    <a href="https://galaxytraveller.fr"><b>Galaxy_traveller.fr</b></a>
+                </p> 
+                </p>
+                <div class="bas">
+                    <div>
+                        <a href="https://fr.wikipedia.org/wiki/C_Sharp_(programming_language)"><b>C#</b></a>
+                        <a href="https://fr.wikipedia.org/wiki/Unity_(moteur_de_jeu)"><b>Unity</b></a>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+        <br><br>
+        <div class="projet_box">
+            <!-- Division pour la partie de gauche-->
+            <div class="gauche1">
+                <h3>Création d'un ORC pour mots mélées - 2024</h3>
+                <p>L'objectif de ce projet est de développer un logiciel OCR (reconnaissance optique de caractères) permettant de résoudre une grille de mots cachés. 
+                    L'application, dotée d'une interface graphique, prendra en entrée une image représentant cette grille et affichera en sortie la grille entièrement résolue.</p>
+                <p>Ce projet à réaliser par groupe de 4 à plusieurs objectifs, mettre en place un pré-traitements pour prendre en entrée une large gamme d'image,
+                    réussir à détecter la grille contenant les caractères ainsi que les caractères eux-mêmes, développer un réseau de neuronne et l'entrainer éfficacement ainsi que 
+                    une UI pour rendre l'utilisation plus simple et agréable </p>
+                <div class="bas">
+                    <div>
+                        <a href="https://fr.wikipedia.org/wiki//C_(programming_language)"><b>C</b></a>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+    
+            <!-- Division pour la partie de droite-->
+            <div class="droite1">
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <img src="OCR/1.png" alt="Image 1" class="carousel-item active">
+                        <img src="OCR/2.png" alt="Image 2" class="carousel-item">
+                        <img src="OCR/3.png" alt="Image 3" class="carousel-item">
+                        <img src="OCR/4.png" alt="Image 4" class="carousel-item">
+                        <img src="OCR/5.png" alt="Image 5" class="carousel-item">
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    
+        <!--- tableau du projet 2 vidéo à droite texte à gauche -->
+        
+    </section>
+    
+    
+    
+    <script>
+        let currentIndex = 0;
+        const items = document.querySelectorAll('.carousel-item');
+        const totalItems = items.length;
+    
+        function showNextImage() {
+            // Enlever la classe 'active' de l'image actuelle
+            items[currentIndex].classList.remove('active');
+            
+            // Calculer l'index de la prochaine image
+            currentIndex = (currentIndex + 1) % totalItems;
+            
+            // Ajouter la classe 'active' à la prochaine image
+            items[currentIndex].classList.add('active');
+        }
+    
+        // Changer d'image toutes les 3 secondes
+        setInterval(showNextImage, 2000);
+    </script>
+    
+      
+      
+    
+    <section id="contact">
+        <br><br><br>
+        <!---titre de la section-->
+        <h2>Me contacter</h2>
+        <!---Division avec les différents moyens de contacter-->
+        <div id="contact_img">
+            <!--Premier moyen de contact-->
+            <div id="contact_lien">
+                
+                <a href="mailto:belperin.n@gmail.fr">
+                    <figure>
+                        <img src="me_contacter/mail.png" height="100px">
+                        <figcaption>belperin.n@gmail.com</figcaption>
+                    </figure>
+                </a>
+                <a href="https://www.linkedin.com/in/noé-belperin-1b8013226/">
+                    <figure>
+                        <img src="me_contacter/link.png" height="100px">
+                        <figcaption>LinkedIn</figcaption>
+                    </figure>
+                </a>
+            </div>
+        </div>
+        <br>
+    </section>
+
+    <!---footer-->
+    <footer>
+        <div id="foot_cont">
+            <p>Site développé par Noé BELPERIN</p>
+            <p>&copy Noé BELPERIN 2025</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
