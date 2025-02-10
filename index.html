@@ -12,6 +12,11 @@
     <nav id="navbar">
         <ul class="menu">
             <li class="title menu-item menu-item-has-children">
+                <a class="link-fade-top" href="#" data-title="Accueil">
+                    <span class="text">Accueil</span>
+                </a>
+            </li>
+            <li class="title menu-item menu-item-has-children">
                 <a class="link-fade-top" href="#a_propos" data-title="À propos">
                     <span class="text">À propos</span>
                 </a>
@@ -33,59 +38,20 @@
             </li>
         </ul>
     </nav>
-    
-    <style>
-    /* Style de la barre de navigation */
-    #navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        padding: 10px 0;
-        z-index: 1000;
-    }
-    
-    .menu {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .menu-item {
-        margin: 0 15px;
-    }
-    
-    .menu-item a {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-        transition: color 0.3s;
-    }
-    
-    .menu-item a:hover {
-        color: #FFD700;
-    }
-    
-    /* Ajout de marge pour éviter que le contenu soit caché */
-    body {
-        margin-top: 60px;
-    }
-    </style>
+
     <!-- Vidéo de fond -->
     <video autoplay muted loop id="background-video">
         <source src="fond.mp4" type="video/mp4">
         Votre navigateur ne prend pas en charge les vidéos HTML5.
     </video>
 
-    <!-- Contenu principal affiché SUR la vidéo -->
-    <div class="content">
-        <h1>Noé BELPERIN</h1>
-        <p>Étudiant en 2ᵉ année d'école d'ingénieur en informatique</p>
-    </div>
+    <section id="accueil">
+        <!-- Contenu principal affiché SUR la vidéo -->
+        <div class="content">
+            <h1>Noé BELPERIN</h1>
+            <p>Étudiant en 2ᵉ année d'école d'ingénieur en informatique</p>
+        </div>
+    </section>
 
     <!-- Section "À propos" en dessous de la vidéo -->
     <section id="a_propos">
@@ -228,9 +194,9 @@
             <div class="gauche1">
                 <div class="carousel-container">
                     <div class="carousel">
-                        <img src="Galaxy_traveller/Lvl1.webp" alt="Image 1" class="carousel-item active">
-                        <img src="Galaxy_traveller/Lvl2.webp" alt="Image 2" class="carousel-item">
-                        <img src="Galaxy_traveller/Lvl3.webp" alt="Image 3" class="carousel-item">
+                        <img src="Galaxy_traveller/Lvl1.webp" alt="Image 1" class="carousel-item2">
+                        <img src="Galaxy_traveller/Lvl2.webp" alt="Image 2" class="carousel-item2">
+                        <img src="Galaxy_traveller/Lvl3.webp" alt="Image 3" class="carousel-item2">
                         
                     </div>
                 </div>
@@ -279,8 +245,7 @@
             <div class="droite1">
                 <div class="carousel-container">
                     <div class="carousel">
-                        <img src="OCR/1.png" alt="Image 1" class="carousel-item active">
-                        <img src="OCR/2.png" alt="Image 2" class="carousel-item">
+                        <img src="OCR/1.png" alt="Image 1" class="carousel-item">
                         <img src="OCR/3.png" alt="Image 3" class="carousel-item">
                         <img src="OCR/4.png" alt="Image 4" class="carousel-item">
                         <img src="OCR/5.png" alt="Image 5" class="carousel-item">
@@ -299,22 +264,32 @@
     
     <script>
         let currentIndex = 0;
-        const items = document.querySelectorAll('.carousel-item');
-        const totalItems = items.length;
-    
-        function showNextImage() {
-            // Enlever la classe 'active' de l'image actuelle
-            items[currentIndex].classList.remove('active');
-            
-            // Calculer l'index de la prochaine image
-            currentIndex = (currentIndex + 1) % totalItems;
-            
-            // Ajouter la classe 'active' à la prochaine image
-            items[currentIndex].classList.add('active');
-        }
-    
-        // Changer d'image toutes les 3 secondes
-        setInterval(showNextImage, 2000);
+    let currentIndex2 = 0;
+
+    const items = document.querySelectorAll('.carousel-item');
+    const items2 = document.querySelectorAll('.carousel-item2'); // Supposons que tu as un deuxième carrousel
+    const totalItems = items.length;
+    const totalItems2 = items2.length;
+
+    // S'assurer que la première image est visible dès le départ
+    if (items.length > 0) items[currentIndex].classList.add('active');
+    if (items2.length > 0) items2[currentIndex2].classList.add('active');
+
+    function showNextImage() {
+        items[currentIndex].classList.remove('active'); // Enlève l'ancienne image
+        currentIndex = (currentIndex + 1) % totalItems; // Passe à la suivante
+        items[currentIndex].classList.add('active'); // Affiche la nouvelle image
+    }
+
+    function showNextImage2() {
+        items2[currentIndex2].classList.remove('active'); // Enlève l'ancienne image
+        currentIndex2 = (currentIndex2 + 1) % totalItems2; // Passe à la suivante
+        items2[currentIndex2].classList.add('active'); // Affiche la nouvelle image
+    }
+
+    // Changement d'image toutes les 2 secondes pour chaque carrousel
+    setInterval(showNextImage, 2000);
+    setInterval(showNextImage2, 3000);
     </script>
     
       
